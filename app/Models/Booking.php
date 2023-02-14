@@ -15,4 +15,12 @@ class Booking extends Model
      * @var bool
      */
     public $timestamps = false;
+
+    /**
+     * Get the room associated with the booking.
+     */
+    public function room()
+    {
+        return $this->hasOne(Room::class);
+    }
 }

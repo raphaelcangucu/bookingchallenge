@@ -15,4 +15,20 @@ class Room extends Model
      * @var bool
      */
     public $timestamps = false;
+
+    /**
+     * Get the booking for the room.
+     */
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
+    }
+
+    /**
+     * Get the blocks for the room.
+     */
+    public function blocks()
+    {
+        return $this->hasMany(Block::class);
+    }
 }
