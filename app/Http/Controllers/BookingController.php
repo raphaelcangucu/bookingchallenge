@@ -16,7 +16,7 @@ class BookingController extends Controller
      */
     public function store(StoreBookingRequest $request)
     {
-        //
+        return Booking::create($request->all());
     }
 
     /**
@@ -27,18 +27,7 @@ class BookingController extends Controller
      */
     public function show(Booking $booking)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Booking  $booking
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Booking $booking)
-    {
-        //
+        return $booking;
     }
 
     /**
@@ -50,7 +39,8 @@ class BookingController extends Controller
      */
     public function update(UpdateBookingRequest $request, Booking $booking)
     {
-        //
+        $booking->update($request->all());
+        return $booking;
     }
 
     /**
@@ -61,6 +51,6 @@ class BookingController extends Controller
      */
     public function destroy(Booking $booking)
     {
-        //
+        return $booking->delete();
     }
 }

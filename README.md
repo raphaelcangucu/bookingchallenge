@@ -1,6 +1,6 @@
 # TODO
 
 - [x] OccupancyController, Repository
-- [] BookingController, Repository
-- [] Api Tests
-- [] Api Swagger 
+- [x] BookingController, Repository
+- [x] Api Tests
+- [ ] Api Swagger 

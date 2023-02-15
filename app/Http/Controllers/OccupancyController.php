@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Repositories\OccupancyRepository;
 use Illuminate\Http\JsonResponse;
 use App\Http\Requests\DailyOccupancyRatesRequest;
 use App\Http\Requests\MonthlyOccupancyRatesRequest;
 use DateTime;
-use Nette\Utils\Json;
 
 class OccupancyController extends Controller
 {
@@ -61,7 +59,7 @@ class OccupancyController extends Controller
     public function monthlyOccupancyRates(MonthlyOccupancyRatesRequest $request): JsonResponse
     {
         $month = new DateTime($request->date);
-        $daysInMonth = 31 ;
+        $daysInMonth = intval($month->format('t')) ;
 
         $bookings = $this->occupancyRepository->countBookingsByMonth($month, $request->room_ids);
         $blocks = $this->occupancyRepository->countBlocksByMonth($month, $request->room_ids);

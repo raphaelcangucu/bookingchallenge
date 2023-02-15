@@ -10,6 +10,13 @@ class Booking extends Model
     use HasFactory;
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['room_id','starts_at','ends_at'];
+
+    /**
      * Indicates if the model should be timestamped.
      *
      * @var bool
