@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OccupancyController;
@@ -23,3 +24,5 @@ Route::controller(OccupancyController::class)->group(function () {
     Route::get('/daily-occupancy-rates/{date?}', 'dailyOccupancyRates');
     Route::get('/monthly-occupancy-rates/{date?}', 'monthlyOccupancyRates');
 });
+
+Route::resource('booking', BookingController::class);

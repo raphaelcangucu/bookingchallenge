@@ -11,7 +11,7 @@ class BookingController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\StoreBookingRequest
      * @return \Illuminate\Http\Response
      */
     public function store(StoreBookingRequest $request)
