@@ -130,7 +130,7 @@ class OccupancyRepository
         $query = Room::query();
 
         if ($roomIds) {
-            $query->whereIn('room_id', $roomIds);
+            $query->whereIn('id', $roomIds);
         }
 
         return $query->sum('capacity');

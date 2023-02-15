@@ -3,4 +3,5 @@
 - [x] OccupancyController, Repository
 - [x] BookingController, Repository
 - [x] Api Tests
-- [ ] Api Swagger 
+- [x] Api Swagger Occupancy, Booking
+- [ ] README - Instalation

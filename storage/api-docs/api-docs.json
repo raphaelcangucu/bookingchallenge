@@ -1,0 +1,178 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Booking API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api": {},
+        "/api/booking": {
+            "post": {
+                "tags": [
+                    "booking"
+                ],
+                "description": "Return the booking by id ",
+                "operationId": "077614f000582fb3bfada3650bf02077",
+                "requestBody": {
+                    "description": "Create Booking object",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Booking"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Booking"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/booking/{id}": {
+            "get": {
+                "tags": [
+                    "booking"
+                ],
+                "description": "Return the booking by id ",
+                "operationId": "ad02c958bb751a4d8591edaddf4d0d1d",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id to load the booking",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "Int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Booking object",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Booking"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/daily-occupancy-rates/{date}": {
+            "get": {
+                "tags": [
+                    "occupancy"
+                ],
+                "description": "Return the daily occupancy rate ",
+                "operationId": "04ff7875605c4e01dc2cbcb590bf6901",
+                "parameters": [
+                    {
+                        "name": "date",
+                        "in": "path",
+                        "description": "Date Day",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "Date"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/monthly-occupancy-rates/{date}": {
+            "get": {
+                "tags": [
+                    "occupancy"
+                ],
+                "description": "Return the monthly occupancy rate ",
+                "operationId": "1c0034fcd79e84857a08c7e98d3fc83a",
+                "parameters": [
+                    {
+                        "name": "date",
+                        "in": "path",
+                        "description": "Date of month",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "Date"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Booking": {
+                "title": "Booking model",
+                "description": "Booking model",
+                "required": [
+                    "room_id",
+                    "starts_at",
+                    "ends_at"
+                ],
+                "properties": {
+                    "room_id": {
+                        "description": "Room Id",
+                        "type": "integer",
+                        "format": "integer",
+                        "example": "1"
+                    },
+                    "starts_at": {
+                        "description": "Date of start",
+                        "type": "string",
+                        "format": "string",
+                        "example": "2023-01-01"
+                    },
+                    "ends_at": {
+                        "description": "Date of end",
+                        "type": "string",
+                        "format": "string",
+                        "example": "2023-01-10"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "Booking"
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "booking",
+            "description": "Booking routes"
+        },
+        {
+            "name": "occupancy",
+            "description": "Occupancy Api"
+        }
+    ]
+}
