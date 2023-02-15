@@ -62,11 +62,6 @@ class BookingController extends Controller
      *             format="Int64"
      *         )
      *     ),
-     *     @OA\RequestBody(
-     *         description="Booking object",
-     *         required=true,
-     *         @OA\JsonContent(ref="#/components/schemas/Booking")
-     *     ),
      *     description="Return the booking by id ",
      *     @OA\Response(response=200, description="")
      * )
@@ -82,6 +77,29 @@ class BookingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Booking  $booking
      * @return \Illuminate\Http\Response
+     */
+    /**
+     * @OA\Put(
+     *     tags={"booking"},
+     *     path="/api/booking/{id}",
+     *     @OA\Parameter(
+     *         name="id",
+     *         in="path",
+     *         description="id to load the booking",
+     *         required=true,
+     *         @OA\Schema(
+     *             type="integer",
+     *             format="Int64"
+     *         )
+     *     ),
+     *     @OA\RequestBody(
+     *         description="Booking object",
+     *         required=true,
+     *         @OA\JsonContent(ref="#/components/schemas/Booking")
+     *     ),
+     *     description="Return the booking by id ",
+     *     @OA\Response(response=200, description="")
+     * )
      */
     public function update(UpdateBookingRequest $request, Booking $booking)
     {

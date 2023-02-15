@@ -57,6 +57,30 @@
                         }
                     }
                 ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "booking"
+                ],
+                "description": "Return the booking by id ",
+                "operationId": "3ccc9ba6874c86b36900a2edd01e0c98",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id to load the booking",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "Int64"
+                        }
+                    }
+                ],
                 "requestBody": {
                     "description": "Booking object",
                     "required": true,

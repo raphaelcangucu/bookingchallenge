@@ -18,6 +18,7 @@ cd bookingchallenge
 
 ./vendor/bin/sail pull mysql redis meilisearch mailpit selenium
 ./vendor/bin/sail build
+./vendor/bin/sail artisan migrate --seed
 
 CYAN='\033[0;36m'
 LIGHT_CYAN='\033[1;36m'
