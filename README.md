@@ -9,23 +9,13 @@ Occupancy rates represent the number of occupied versus vacant rooms. We need oc
 
 ## Pre requisites
 
-| Software | Versão | Descrição |
-|---|---|---|
-| PHP | 8.2 | PHP Version  |
-| Composer | 2.* | Most actual version of composer |
-| Docker | ** | Most actual version of composer |
+- Docker
 
 ## Steps
 
-### Clone repository
+    curl -s "https://github.com/raphaelcangucu/bookingchallenge/install" | bash
 
-    git clone https://github.com/raphaelcangucu/bookingchallenge
-
-### Install vendors
-
-    composer install
-
-### Starting the project
+## Starting the project
 
     ./vendor/bin/sail up
 
