@@ -1,7 +1,49 @@
+# Booking Challenge
+
+## Description
+
+The task of the test is to correctly calculate room occupancy rates. 
+Occupancy rates represent the number of occupied versus vacant rooms. We need occupancy rates for a single day vs multiple room ids and for a single month vs multiple room ids (so queries are not always against all rooms).
+
+# Instalation
+
+## Pre requisites
+
+| Software | Versão | Descrição |
+|---|---|---|
+| PHP | 8.2 | PHP Version  |
+| Composer | 2.* | Most actual version of composer |
+| Docker | ** | Most actual version of composer |
+
+## Steps
+
+### Clone repository
+
+    git clone https://github.com/raphaelcangucu/bookingchallenge
+
+### Install vendors
+
+    composer install
+
+### Starting the project
+
+    ./vendor/bin/sail up
+
+# Testing the project
+
+## Api Documentation
+
+You can access the main url at http://0.0.0.0  and try the Swagger routes
+
+## Run command line tests
+
+    ./vendor/bin/sail artisan test
 # TODO
+
+Tasks
 
 - [x] OccupancyController, Repository
 - [x] BookingController, Repository
 - [x] Api Tests
 - [x] Api Swagger Occupancy, Booking
-- [ ] README - Instalation
+- [x] README - Instalation
