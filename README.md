@@ -13,7 +13,7 @@ Occupancy rates represent the number of occupied versus vacant rooms. We need oc
 
 ## Steps
 
-    curl -s "https://github.com/raphaelcangucu/bookingchallenge/install" | bash
+    curl -s "https://raw.githubusercontent.com/raphaelcangucu/bookingchallenge/master/install" | bash
 
 ## Starting the project
 
