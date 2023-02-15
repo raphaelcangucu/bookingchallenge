@@ -11,13 +11,17 @@ Occupancy rates represent the number of occupied versus vacant rooms. We need oc
 
 - Docker
 
-## Steps
+## Install
 
     curl -s "https://raw.githubusercontent.com/raphaelcangucu/bookingchallenge/master/install" | bash
 
 ## Starting the project
 
-    ./vendor/bin/sail up
+    ./vendor/bin/sail up -d
+    
+## Run the migrations with seed
+
+    ./vendor/bin/sail artisan migrate --seed
 
 # Testing the project
 

@@ -18,7 +18,6 @@ cd bookingchallenge
 
 ./vendor/bin/sail pull mysql redis meilisearch mailpit selenium
 ./vendor/bin/sail build
-./vendor/bin/sail artisan migrate --seed
 
 CYAN='\033[0;36m'
 LIGHT_CYAN='\033[1;36m'
@@ -29,11 +28,13 @@ echo ""
 
 if sudo -n true 2>/dev/null; then
     sudo chown -R $USER: .
-    echo -e "${BOLD}Get started with:${NC} cd example-app && ./vendor/bin/sail up"
+    echo -e "${BOLD}Get started with:${NC} cd bookingchallenge && ./vendor/bin/sail up"
 else
     echo -e "${BOLD}Please provide your password so we can make some final adjustments to your application's permissions.${NC}"
     echo ""
     sudo chown -R $USER: .
     echo ""
-    echo -e "${BOLD}Thank you! We hope you build something incredible. Dive in with:${NC} cd bookingchallenge && ./vendor/bin/sail up"
+    echo -e "Dive in with:${NC} cd bookingchallenge && ./vendor/bin/sail up -d"
+    echo -e "Dont forget to install and migrate the files:${NC} cd bookingchallenge && ./vendor/bin/sail artisan migrate --seed"
+    echo -e "${BOLD}Thank you! We hope you build something incredible."
 fi
